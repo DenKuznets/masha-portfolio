@@ -18,6 +18,7 @@ h1 {
     font-weight: 600;
     font-size: 6rem;
     line-height: 1.21;
+letter-spacing: 0.005em;
 }
 
 h2{
@@ -25,6 +26,16 @@ h2{
 font-weight: 700;
 font-size: 3rem;
 line-height: 1.21;
+letter-spacing: 0.035em;
+}
+
+p{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 1.5rem;
+line-height: 1.21;
+letter-spacing: 0.02em;
 }
 
 .bg1 {

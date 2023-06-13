@@ -2,7 +2,35 @@ import styled from "styled-components";
 import { RedButton, WhiteButton } from "./Buttons";
 
 const HeroStyled = styled.section`
-    
+    padding-top: 286px;
+    .hero__content {
+        max-width: 840px;
+        /* margin-top: 332px; */
+        margin-left: 252px;
+        h1 {
+            color: ${({ theme }) => theme.colors.smoothRed};
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: ${({ theme }) => theme.colors.creamyWhite};
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        p {
+            color: ${({ theme }) => theme.colors.creamyWhite};
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        &-buttons {
+            display: flex;
+            column-gap: 42px;
+            a,
+            button {
+                text-align: center;
+                width: 189px;
+            }
+        }
+    }
 `;
 
 const Hero = () => {
@@ -17,7 +45,7 @@ const Hero = () => {
                     dignissim, metus nec fringilla accumsan, risus sem
                     sollicitudin lacus, ut interdum tellus elit sed risus.
                 </p>
-                <div className="hero__buttons">
+                <div className="hero__content-buttons">
                     <RedButton as="a" href="https://t.me/davinchushka">
                         Hire me
                     </RedButton>
