@@ -24,7 +24,7 @@ function App() {
         <>
             <ThemeProvider theme={colorTheme}>
                 <GlobalStyle />
-                <RouterProvider router={router} />;
+                <RouterProvider router={router} />
             </ThemeProvider>
         </>
     );

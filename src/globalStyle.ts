@@ -33,17 +33,7 @@ h1 {
 }
 
 h2{
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 3rem;
-    line-height: 1.21;
-    letter-spacing: 0.035em;
-    @media only screen and (max-width: ${screen.laptop}) {
-        font-size: calc(3rem * ${laptopMultiplyer});
-    }
-       @media only screen and (max-width: ${screen.mobileL}) {
-        font-size: calc(3rem * ${mobileMultiplyer});        
-    }
+    
 }
 
 p{
