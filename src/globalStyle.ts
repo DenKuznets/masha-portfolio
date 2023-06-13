@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import cssResets from "./cssResets";
+import screen from "./breakpoints";
 
 const GlobalStyle = createGlobalStyle`
 ${cssResets};
@@ -19,6 +20,9 @@ h1 {
     font-size: 6rem;
     line-height: 1.21;
 letter-spacing: 0.005em;
+@media only screen and (max-width: ${screen.laptop}) {
+    /* font-size: 4rem; */
+}
 }
 
 h2{

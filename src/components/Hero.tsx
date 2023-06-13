@@ -3,10 +3,15 @@ import { RedButton, WhiteButton } from "./Buttons";
 
 const HeroStyled = styled.section`
     padding-top: 286px;
+    @media only screen and (max-width: 1440px) {
+        /* padding: 0; */
+    }
     .hero__content {
         max-width: 840px;
-        /* margin-top: 332px; */
         margin-left: 252px;
+        @media only screen and (max-width: 1440px) {
+            margin: auto;
+        }
         h1 {
             color: ${({ theme }) => theme.colors.smoothRed};
             margin-bottom: 20px;
