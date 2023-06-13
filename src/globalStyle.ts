@@ -2,8 +2,12 @@ import { createGlobalStyle } from "styled-components";
 import cssResets from "./cssResets";
 import screen from "./breakpoints";
 
+const laptopMultiplyer = 0.7;
+const mobileMultiplyer = 0.5;
+
 const GlobalStyle = createGlobalStyle`
 ${cssResets};
+
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -19,27 +23,42 @@ h1 {
     font-weight: 600;
     font-size: 6rem;
     line-height: 1.21;
-letter-spacing: 0.005em;
-@media only screen and (max-width: ${screen.laptop}) {
-    /* font-size: 4rem; */
-}
+    letter-spacing: 0.005em;    
+    @media only screen and (max-width: ${screen.laptop}) {
+        font-size: calc(6rem * ${laptopMultiplyer});
+    }
+    @media only screen and (max-width: ${screen.mobileL}) {
+        font-size: calc(6rem * ${mobileMultiplyer});        
+    }
 }
 
 h2{
     font-family: 'Montserrat';
-font-weight: 700;
-font-size: 3rem;
-line-height: 1.21;
-letter-spacing: 0.035em;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.21;
+    letter-spacing: 0.035em;
+    @media only screen and (max-width: ${screen.laptop}) {
+        font-size: calc(3rem * ${laptopMultiplyer});
+    }
+       @media only screen and (max-width: ${screen.mobileL}) {
+        font-size: calc(3rem * ${mobileMultiplyer});        
+    }
 }
 
 p{
     font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-size: 1.5rem;
-line-height: 1.21;
-letter-spacing: 0.02em;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.21;
+    letter-spacing: 0.02em;
+    /* @media only screen and (max-width: ${screen.laptop}) {
+        font-size: calc(1.5rem * ${laptopMultiplyer});
+    } */
+    /* @media only screen and (max-width: ${screen.laptop}) {
+        font-size: calc(1.5rem * ${mobileMultiplyer});
+    } */
 }
 
 .bg1 {

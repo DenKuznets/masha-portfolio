@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import { RedButton, WhiteButton } from "./Buttons";
+import screen from "../breakpoints";
 
 const HeroStyled = styled.section`
     padding-top: 286px;
-    @media only screen and (max-width: 1440px) {
-        /* padding: 0; */
+    @media only screen and (max-width: 500px) {
+        padding-top: 100px;
+        text-align: center;
     }
     .hero__content {
         max-width: 840px;
@@ -15,6 +17,7 @@ const HeroStyled = styled.section`
         h1 {
             color: ${({ theme }) => theme.colors.smoothRed};
             margin-bottom: 20px;
+            
         }
         h2 {
             color: ${({ theme }) => theme.colors.creamyWhite};
@@ -28,7 +31,11 @@ const HeroStyled = styled.section`
         }
         &-buttons {
             display: flex;
-            column-gap: 42px;
+            gap: 42px;
+            @media only screen and (max-width: 500px) {
+                flex-direction: column;
+                align-items: center;
+            }
             a,
             button {
                 text-align: center;
