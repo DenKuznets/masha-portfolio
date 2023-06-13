@@ -1,4 +1,5 @@
-/***
+const cssResets = `
+ /***
     The new CSS reset - version 1.8.4 (last updated 14.2.2023)
     GitHub page: https://github.com/elad2412/the-new-css-reset
 ***/
@@ -102,26 +103,7 @@ meter {
     all: revert;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    /* margin: 0;
-    padding: 0; */
-}
+/* END OF RESETS */
+`;
 
-section, header {
-    padding: 0 15px;
-}
-
-.bg1 {
-    /* padding-top: 71px; */
-    background-image: url(/images/hero-mask.svg),
-        url(/images/hero-img.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    min-height: 1000px;
-    background-position: center;
-    @media only screen and (max-width: 1395px) {
-        /* padding-top: 10px; */
-    }
-}
+export default cssResets;

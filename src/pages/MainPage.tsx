@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 
@@ -7,7 +6,7 @@ const MainPage = () => {
         <>
             <main>
                 <div className="bg1">
-                    <Header />
+                    {/* <Header /> */}
                     <Hero />
                 </div>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut

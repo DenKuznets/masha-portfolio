@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IconContext } from "react-icons";
+import { RedButton } from "./Buttons";
 
 const navText = [
     "Home",
@@ -14,11 +15,15 @@ const navText = [
 
 const navHide = "1395px";
 
-const navList = navText.map((item, index) => <li key={index}>{item}</li>);
+const navList = navText.map((item, index) => (
+    <li key={index}>
+        <a href="">{item}</a>
+    </li>
+));
 
 const HeaderStyled = styled.header`
     position: sticky;
-    top: 0;
+    top: 20px;
     margin: 0 auto;
     color: ${({ theme }) => theme.colors.creamyWhite};
     display: flex;
@@ -32,16 +37,14 @@ const HeaderStyled = styled.header`
         color: ${({ theme }) => theme.colors.white};
         margin-right: auto;
 
+        @media only screen and (max-width: 500px) {
+            margin-right: auto;
+            font-size: 1.2rem;
+        }
+        
         span {
             color: ${({ theme }) => theme.colors.smoothRed};
             font-weight: 800;
-        }
-
-        @media only screen and (max-width: 530px) {
-            margin-right: auto;
-        }
-        @media only screen and (max-width: 425px) {
-            font-size: 1.2rem;
         }
     }
 
@@ -63,6 +66,7 @@ const HeaderStyled = styled.header`
             display: flex;
             align-items: center;
             margin-right: 35px;
+            
             ul {
                 gap: 35px;
                 transition: all 0.4s;
@@ -90,27 +94,21 @@ const HeaderStyled = styled.header`
                 }
                 li {
                     font-weight: 500;
-                    font-size: 24px;
+                    font-size: 1.5rem;
                     line-height: 29px;
-                    color: ${({theme})=>theme.colors.creamyWhite};
+                    color: ${({ theme }) => theme.colors.creamyWhite};
                     @media (max-width: ${navHide}) {
                         margin-right: 0;
-                        margin-bottom: 1em;
-                        font-size: 2rem;
+                        /* margin-bottom: 1em; */
+                        font-size: 1rem;
                     }
                 }
             }
         }       
     }
 
-    button {
-        font-weight: 500;
-        font-size: 21px;
-        line-height: 26px;
-        letter-spacing: 0.02em;
-        color: #fff;
-        background: ${({ theme }) => theme.colors.smoothRed};
-        padding: 18px 19px;
+    button {        
+        
         @media only screen and (max-width: ${navHide}) {
             margin-right: 35px;
         }
@@ -121,26 +119,33 @@ const HeaderStyled = styled.header`
 `;
 
 const Header = () => {
-    const [showMenu, setShowMenu] = useState(false);
+    const [menuActive, setMenuActive] = useState(false);
+    useEffect(() => {
+        if (menuActive) document.body.style.overflow = "hidden";
+        else document.body.style.overflow = "auto";
+    }, [menuActive]);
+
     return (
         <HeaderStyled>
             <div className="logo">
                 <span>D</span>avinchushka
             </div>
             <nav>
-                <ul className={showMenu ? "nav__menu--open" : ""}>{navList}</ul>
+                <ul className={menuActive ? "nav__menu--open" : ""}>
+                    {navList}
+                </ul>
             </nav>
-            <button>Download CV</button>
+            <RedButton>Download CV</RedButton>
             <IconContext.Provider
                 value={{
                     size: "2.5em",
-                    className: `burger ${showMenu ? "burger--open" : ""}`,
+                    className: `burger ${menuActive ? "burger--open" : ""}`,
                     color: "red",
                 }}
             >
                 <div
                     onClick={() => {
-                        setShowMenu(!showMenu);
+                        setMenuActive(!menuActive);
                     }}
                 >
                     <RxHamburgerMenu />

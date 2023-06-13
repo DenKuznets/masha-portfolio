@@ -1,4 +1,5 @@
-import "./App.css";
+// import "./App.css";
+import GlobalStyle from "./globalStyle";
 import {
     RouterProvider,
     createBrowserRouter,
@@ -22,6 +23,7 @@ function App() {
     return (
         <>
             <ThemeProvider theme={colorTheme}>
+                <GlobalStyle />
                 <RouterProvider router={router} />;
             </ThemeProvider>
         </>
