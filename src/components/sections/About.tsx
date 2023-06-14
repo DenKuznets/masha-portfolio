@@ -28,12 +28,12 @@ const AboutStyled = styled.section`
             /* flex-basis: 700px; */
             max-width: 700px;
             h2 {
-                margin-bottom: 20px;
+                margin-bottom: 10px;
             }
 
             p {
                 line-height: 137%;
-                margin-bottom: 20px;
+                margin-bottom: 15px;
                 color: #000;
                 text-align: justify;
                 letter-spacing: 0.04em;

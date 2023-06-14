@@ -14,7 +14,7 @@ const SliderStyled = styled.div<StyledSliderProps>`
         font-weight: 600;
         font-size: 1.5rem;
         line-height: 1.3;
-        margin-bottom: 23px;
+        margin-bottom: 20px;
     }
 
     .slider__graphics {

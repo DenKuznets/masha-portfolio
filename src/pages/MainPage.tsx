@@ -1,4 +1,5 @@
 import About from "../components/sections/About";
+import Projects from "../components/sections/Projects";
 import Services from "../components/sections/Services";
 
 const MainPage = () => {
@@ -9,8 +10,9 @@ const MainPage = () => {
                 {/* <Header /> */}
                 {/* <Hero /> */}
                 {/* </div>                 */}
-                {/* <About />s */}
-                <Services />
+                {/* <About /> */}
+                {/* <Services /> */}
+                <Projects />
             </main>
         </>
     );
