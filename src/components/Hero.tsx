@@ -40,7 +40,7 @@ const HeroStyled = styled.section`
             text-align: justify;
             margin-bottom: 20px;
         }
-        &-buttons {
+        &__buttons {
             display: flex;
             gap: 42px;
             @media only screen and (max-width: 500px) {
