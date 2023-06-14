@@ -3,7 +3,7 @@ import { RedButton, WhiteButton } from "./Buttons";
 import screen from "../breakpoints";
 
 const HeroStyled = styled.section`
-    padding-top: 286px;
+    padding-top: 275px;
     @media only screen and (max-width: 500px) {
         padding-top: 100px;
         text-align: center;
@@ -16,7 +16,7 @@ const HeroStyled = styled.section`
         }
         h1 {
             color: ${({ theme }) => theme.colors.smoothRed};
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         &__em {
             --fontSize: 3rem;
@@ -27,7 +27,7 @@ const HeroStyled = styled.section`
             letter-spacing: 0.035em;
             color: ${({ theme }) => theme.colors.creamyWhite};
             font-style: italic;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             @media only screen and (max-width: ${screen.laptop}) {
                 font-size: calc(var(--fontSize) * 0.7);
             }
@@ -38,7 +38,13 @@ const HeroStyled = styled.section`
         p {
             color: ${({ theme }) => theme.colors.creamyWhite};
             text-align: justify;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            @media only screen and (max-width: 831px) {
+                text-align: left;
+            }
+            @media only screen and (max-width: 500px) {
+                text-align: center;
+            }
         }
         &__buttons {
             display: flex;
