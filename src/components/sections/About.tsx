@@ -1,62 +1,57 @@
 import styled from "styled-components";
 import aboutImg from "../../../public/images/about-img.png";
+import Slider from "../ui/Slider";
 
 const AboutStyled = styled.section`
     .about {
+        display: flex;
+        /* margin: 0 auto; */
+        justify-content: center;
+        align-items: center;
+        gap: 64px;
+        @media only screen and (max-width: 1350px) {
+            flex-direction: column-reverse;
+            gap: 0;
+        }
+        &__image {
+            /* height: 876px; */
+            /* flex: 1; */
+            flex-basis: 798px;
+            @media only screen and (max-width: 1350px) {
+                max-width: 700px;
+            }
+            /* outline: 1px solid black; */
+        }
+        &__text {
+            /* outline: 1px solid black; */
+            /* flex: 1; */
+            /* flex-basis: 700px; */
+            max-width: 700px;
+            h2 {
+                margin-bottom: 20px;
+            }
+
+            p {
+                line-height: 137%;
+                margin-bottom: 20px;
+                color: #000;
+                text-align: justify;
+                letter-spacing: 0.04em;
+            }
+        }
+    }
+
+    .slider {
+        margin-bottom: 20px;
     }
 `;
 
-const SliderStyled = styled.div`
-    .slider__graphics {
-        position: relative;
-        width: 700px;
-        height: 20px;
-        .greyline {
-            height: inherit;
-            position: absolute;
-            width: 100%;
-            background-color: #d9d9d9;
-        }
-        .redline {
-            background-color: #dc3635;
-            width: ${({position})=> position}%;
-            height: inherit;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        .handle {
-            width: 25px;
-            height: 25px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: calc(${({position})=>position}% - 12px);
-            border-radius: 50%;
-            background: #ebebeb;
-            border: 2px solid #dc3635;
-            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.29);
-        }
-    }
-`;
+const slidersText = ["UX Design", "App Design", "Graphic Design", "Web Design"];
+const slidersPosition = [85, 76, 95, 88];
 
-interface SliderProps {
-    header: string;
-    position: number;
-}
-
-function Slider({ header, position }: SliderProps) {
-    return (
-        <SliderStyled className="slider" position={position}>
-            <div className="slider__header">{header}</div>
-            <div className="slider__graphics">
-                <span className="greyline"></span>
-                <span className="redline"></span>
-                <span className="handle"></span>
-            </div>
-        </SliderStyled>
-    );
-}
+const sliders = slidersText.map((slider, index) => (
+    <Slider key={index} header={slider} position={slidersPosition[index]} />
+));
 
 const About = () => {
     return (
@@ -71,9 +66,7 @@ const About = () => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Etiam eu turpis molestie, dictum est a, mattis tellus.
                     </p>
-                    <div className="about__presentation">
-                        <Slider header="UX Design" position={85} />
-                    </div>
+                    <div className="about__presentation">{sliders}</div>
                 </div>
             </div>
         </AboutStyled>

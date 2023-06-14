@@ -18,8 +18,6 @@ section, header {
 }
 
 h1 {
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 600;
     font-size: 6rem;
     line-height: 1.21;
@@ -33,12 +31,18 @@ h1 {
 }
 
 h2{
-    
+    font-weight: 600;
+    font-size: 3.45rem;
+    line-height: 1.25;
+}
+
+h3{
+    font-weight: 600;
+    font-size: 1.875rem;
+    line-height: 1.21;
 }
 
 p{
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 1.21;

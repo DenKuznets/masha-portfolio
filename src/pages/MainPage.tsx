@@ -1,4 +1,5 @@
 import About from "../components/sections/About";
+import Services from "../components/sections/Services";
 
 const MainPage = () => {
     return (
@@ -8,7 +9,8 @@ const MainPage = () => {
                 {/* <Header /> */}
                 {/* <Hero /> */}
                 {/* </div>                 */}
-                <About />
+                {/* <About />s */}
+                <Services />
             </main>
         </>
     );
