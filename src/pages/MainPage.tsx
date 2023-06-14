@@ -1,15 +1,13 @@
-import About from "../components/About";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
+import About from "../components/sections/About";
 
 const MainPage = () => {
     return (
         <>
             <main>
-                <div className="bg1">
+                {/* <div className="bg1"> */}
                 {/* <Header /> */}
-                <Hero />
-                </div>                
+                {/* <Hero /> */}
+                {/* </div>                 */}
                 <About />
             </main>
         </>
