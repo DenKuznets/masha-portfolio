@@ -7,8 +7,8 @@ const ProjectsStyled = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 14px;
     max-width: 1400px;
+    padding-top: 14px;
     margin: 0 auto;
     h2 {
         margin-bottom: 7px;
