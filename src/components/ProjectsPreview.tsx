@@ -1,14 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-interface CardType  {    
-    type: string;
-    name: string;
-    description: string;
-    images: string[];
-
-}
-
 const ProjectsPreviewStyled = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -52,7 +44,14 @@ const ProjectsPreviewStyled = styled.div`
     }
 `;
 
-const ProjectsPreview = ({ cards }) => {
+type CardType = {
+    type: string;
+    name: string;
+    description: string;
+    images: string[];
+}[]
+
+const ProjectsPreview = ({ cards } : {cards : CardType}) => {
     const randomHeight = () => Math.floor(Math.random() * (500 - 300) + 300);
     const randomWidth = () => Math.floor(Math.random() * (90 - 50) + 50);
 
