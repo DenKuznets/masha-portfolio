@@ -1,4 +1,3 @@
-import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
 import ProjectsList from "../ts/projectsList";
 import { useState } from "react";
@@ -56,7 +55,7 @@ const ProjectsStyled = styled.section`
 const Projects = () => {
     const filters = new Set(ProjectsList.map((project) => project.type));
     const [selected, setSelected] = useState("");
-    
+
     const filtersList = Array.from(filters).map((filter, index) => (
         <li
             onClick={() => setSelected(filter)}
