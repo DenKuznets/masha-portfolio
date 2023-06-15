@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { RedButton, WhiteButton } from "../ui/Buttons";
-import screen from "../../breakpoints";
+import screen from "../ts/breakpoints";
 
 const HeroStyled = styled.section`
     padding-top: 275px;

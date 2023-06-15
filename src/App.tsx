@@ -1,5 +1,4 @@
-// import "./App.css";
-import GlobalStyle from "./globalStyle";
+import GlobalStyle from "./ts/globalStyle";
 import {
     RouterProvider,
     createBrowserRouter,
@@ -9,7 +8,7 @@ import {
 import Layout from "./components/Layout";
 import MainPage from "./pages/MainPage";
 import { ThemeProvider } from "styled-components";
-import colorTheme from "./colorTheme";
+import colorTheme from "./ts/colorTheme";
 
 const router = createBrowserRouter(
     createRoutesFromElements(

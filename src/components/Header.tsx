@@ -2,7 +2,7 @@ import HeaderStyled from "./styled/HeaderStyled";
 import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IconContext } from "react-icons";
-import { RedButton } from "./ui/Buttons";
+import { RedButton } from "../ui/Buttons";
 
 const navText = [
     "Home",

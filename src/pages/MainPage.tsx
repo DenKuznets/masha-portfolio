@@ -1,6 +1,6 @@
-import About from "../components/sections/About";
-import Projects from "../components/sections/Projects";
-import Services from "../components/sections/Services";
+import About from "../sections/About";
+import Projects from "../sections/Projects";
+import Services from "../sections/Services";
 
 const MainPage = () => {
     return (

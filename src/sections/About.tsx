@@ -5,7 +5,6 @@ import Slider from "../ui/Slider";
 const AboutStyled = styled.section`
     .about {
         display: flex;
-        /* margin: 0 auto; */
         justify-content: center;
         align-items: center;
         gap: 64px;
@@ -14,18 +13,12 @@ const AboutStyled = styled.section`
             gap: 0;
         }
         &__image {
-            /* height: 876px; */
-            /* flex: 1; */
             flex-basis: 798px;
             @media only screen and (max-width: 1350px) {
                 max-width: 700px;
             }
-            /* outline: 1px solid black; */
         }
         &__text {
-            /* outline: 1px solid black; */
-            /* flex: 1; */
-            /* flex-basis: 700px; */
             max-width: 700px;
             h2 {
                 margin-bottom: 10px;
