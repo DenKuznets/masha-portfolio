@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -19,6 +20,7 @@ const ProjectsPreviewStyled = styled.div`
         background-color: ${({ theme }) => theme.colors.palePink};
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         cursor: pointer;
+
         .over {
             position: absolute;
             top: 0;
@@ -41,6 +43,18 @@ const ProjectsPreviewStyled = styled.div`
             height: 100%;
             object-fit: cover;
         }
+
+        &__overlay {
+            z-index: 1;
+            width: 0;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.35s ease-in;
+            opacity: 0.8;
+            background-color: black;
+        }
     }
 `;
 
@@ -49,15 +63,55 @@ type CardType = {
     name: string;
     description: string;
     images: string[];
-}[]
+}[];
 
-const ProjectsPreview = ({ cards } : {cards : CardType}) => {
+const ProjectsPreview = ({ cards }: { cards: CardType }) => {
     const randomHeight = () => Math.floor(Math.random() * (500 - 300) + 300);
     const randomWidth = () => Math.floor(Math.random() * (90 - 50) + 50);
+    const overlayRef = useRef(null);
+    const cardsRef = useRef(null);
+
+    function handleMouseEnter(e) {
+        console.log("mouse enter", e.target, cardsRef);
+
+        overlayRef.current.style.width =
+            cardsRef.current.clientWidth + 2 + "px";
+    }
+
+    function handleMouseLeave(e) {
+        console.log("mouse leave", overlayRef);
+
+        overlayRef.current.style.width = "0";
+    }
+
+    function getMap() {
+        if (!cardsRef.current) {
+            // Initialize the Map on first usage.
+            cardsRef.current = new Map();
+        }
+        return cardsRef.current;
+    }
 
     const cardsList = cards.map((card, index) => (
-        <div key={index} className="card">
-            <Link to={`projects/${index + 1}`}>
+        <div
+            key={index}
+            className="card"
+            onMouseEnter={(e) => handleMouseEnter(e)}
+            onMouseLeave={(e) => handleMouseLeave(e)}
+        >
+            <div ref={overlayRef} className="card__overlay"></div>
+            <Link
+                ref={(node) => {
+                    const map = getMap();
+                    // console.log('node', node);
+                    if (node) {
+                        map.set(index, node);
+                    } else {
+                        map.delete(index);
+                    }
+                }}
+                to={`projects/${index + 1}`}
+            >
                 <div
                     style={{
                         height: randomHeight() + "px",
