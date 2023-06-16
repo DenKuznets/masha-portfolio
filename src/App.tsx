@@ -9,11 +9,13 @@ import Layout from "./components/Layout";
 import MainPage from "./pages/MainPage";
 import { ThemeProvider } from "styled-components";
 import colorTheme from "./ts/colorTheme";
+import ProjectPage from "./pages/ProjectPage";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Layout />}>
             <Route index element={<MainPage />} />
+            <Route path="projects/:id" element={<ProjectPage />} />
         </Route>
     )
 );

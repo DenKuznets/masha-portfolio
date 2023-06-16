@@ -69,6 +69,7 @@ type CardType = {
     name: string;
     description: string;
     images: string[];
+    id: number;
 }[];
 
 const ProjectsPreview = ({ cards }: { cards: CardType }) => {
@@ -98,7 +99,8 @@ const ProjectsPreview = ({ cards }: { cards: CardType }) => {
     }
 
     const cardsList = cards.map((card, index) => (
-        <div
+        <Link
+            to={`projects/${card.id}`}
             key={index}
             className="card"
             onMouseEnter={(e) => handleMouseEnter(e)}
@@ -107,26 +109,25 @@ const ProjectsPreview = ({ cards }: { cards: CardType }) => {
             <div className="card__overlay">
                 <h3>{card.name}</h3>
             </div>
-            <Link to={`projects/${index + 1}`}>
-                <div
-                    style={{
-                        height: randomHeight() + "px",
-                    }}
-                    className="under"
-                >
-                    <img src={`/images/projects/${card.images[1]}`} alt="" />
-                </div>
-                <div
-                    style={{
-                        height: randomHeight() + "px",
-                        width: randomWidth() + "%",
-                    }}
-                    className="over"
-                >
-                    <img src={`/images/projects/${card.images[0]}`} alt="" />
-                </div>
-            </Link>
-        </div>
+
+            <div
+                style={{
+                    height: randomHeight() + "px",
+                }}
+                className="under"
+            >
+                <img src={`/images/projects/${card.images[1]}`} alt="" />
+            </div>
+            <div
+                style={{
+                    height: randomHeight() + "px",
+                    width: randomWidth() + "%",
+                }}
+                className="over"
+            >
+                <img src={`/images/projects/${card.images[0]}`} alt="" />
+            </div>
+        </Link>
     ));
     return (
         <ProjectsPreviewStyled className="projects__content-cards">
