@@ -1,2 +1,2 @@
-testimonials styling
+Contacts section
 ProjectPage design and styling
