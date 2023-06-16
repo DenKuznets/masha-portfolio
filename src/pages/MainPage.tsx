@@ -13,8 +13,8 @@ const MainPage = () => {
                 {/* </div>                 */}
                 {/* <About /> */}
                 {/* <Services /> */}
-                <Projects />
-                {/* <Testimonials /> */}
+                {/* <Projects /> */}
+                <Testimonials />
             </main>
         </>
     );
