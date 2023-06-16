@@ -69,20 +69,25 @@ const ProjectsPreview = ({ cards }: { cards: CardType }) => {
     const randomHeight = () => Math.floor(Math.random() * (500 - 300) + 300);
     const randomWidth = () => Math.floor(Math.random() * (90 - 50) + 50);
 
-    function handleMouseEnter(e: MouseEvent) {
+    function handleMouseEnter(e: React.MouseEvent<HTMLElement, MouseEvent>) {
         if (e.target instanceof HTMLElement) {
             const card = e.target.closest(".card");
-            const overlay = card.querySelector(".card__overlay");
-            overlay.style.width =
-                e.target.closest(".card").clientWidth + 2 + "px";
+            if (card) {
+                const overlay =
+                    card.querySelector<HTMLElement>(".card__overlay");
+                if (overlay) overlay.style.width = card.clientWidth + 2 + "px";
+            }
         }
     }
 
-    function handleMouseLeave(e: MouseEvent) {
+    function handleMouseLeave(e: React.MouseEvent<HTMLElement, MouseEvent>) {
         if (e.target instanceof HTMLElement) {
             const card = e.target.closest(".card");
-            const overlay = card.querySelector(".card__overlay");
-            overlay.style.width = 0;
+            if (card) {
+                const overlay =
+                    card.querySelector<HTMLElement>(".card__overlay");
+                if (overlay) overlay.style.width = "0";
+            }
         }
     }
 
