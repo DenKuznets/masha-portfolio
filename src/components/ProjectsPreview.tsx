@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -46,14 +45,21 @@ const ProjectsPreviewStyled = styled.div`
 
         &__overlay {
             z-index: 1;
-            width: 0;
+            width: 100%;
             height: 100%;
             position: absolute;
             top: 0;
             left: 0;
-            transition: all 0.35s ease-in;
-            opacity: 0.8;
-            background-color: black;
+            transition: all 0.15s ease-in;
+            background-color: rgba(0, 0, 0, 0.6);
+            transform: scale(0);
+            padding: 15px;
+            h3 {
+                color: ${({ theme }) => theme.colors.palePink};
+            }
+            &--active {
+                transform: scale(1);
+            }
         }
     }
 `;
@@ -75,7 +81,7 @@ const ProjectsPreview = ({ cards }: { cards: CardType }) => {
             if (card) {
                 const overlay =
                     card.querySelector<HTMLElement>(".card__overlay");
-                if (overlay) overlay.style.width = card.clientWidth + 2 + "px";
+                if (overlay) overlay.classList.add("card__overlay--active");
             }
         }
     }
@@ -86,7 +92,7 @@ const ProjectsPreview = ({ cards }: { cards: CardType }) => {
             if (card) {
                 const overlay =
                     card.querySelector<HTMLElement>(".card__overlay");
-                if (overlay) overlay.style.width = "0";
+                if (overlay) overlay.classList.remove("card__overlay--active");
             }
         }
     }
@@ -98,7 +104,9 @@ const ProjectsPreview = ({ cards }: { cards: CardType }) => {
             onMouseEnter={(e) => handleMouseEnter(e)}
             onMouseLeave={(e) => handleMouseLeave(e)}
         >
-            <div className="card__overlay"></div>
+            <div className="card__overlay">
+                <h3>{card.name}</h3>
+            </div>
             <Link to={`projects/${index + 1}`}>
                 <div
                     style={{
