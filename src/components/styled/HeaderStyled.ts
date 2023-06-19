@@ -12,19 +12,11 @@ const HeaderStyled = styled.header`
     max-width: 1404px;
 
     .logo {
-        font-size: 2.5rem;
-        line-height: 1.2;
         color: ${({ theme }) => theme.colors.white};
         margin-right: auto;
 
         @media only screen and (max-width: 500px) {
             margin-right: auto;
-            font-size: 1.2rem;
-        }
-
-        span {
-            color: ${({ theme }) => theme.colors.smoothRed};
-            font-weight: 800;
         }
     }
 
@@ -43,17 +35,9 @@ const HeaderStyled = styled.header`
     }
 
     nav {
-        display: flex;
-        align-items: center;
         margin-right: 35px;
 
         ul {
-            gap: 35px;
-            transition: all 0.4s;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             @media (max-width: ${navHide}) {
                 position: fixed;
                 width: 100%;
@@ -73,13 +57,9 @@ const HeaderStyled = styled.header`
                 }
             }
             li {
-                font-weight: 500;
-                font-size: 1.5rem;
-                line-height: 29px;
                 color: ${({ theme }) => theme.colors.creamyWhite};
                 @media (max-width: ${navHide}) {
                     margin-right: 0;
-                    /* margin-bottom: 1em; */
                     font-size: 1rem;
                 }
             }
@@ -96,4 +76,4 @@ const HeaderStyled = styled.header`
     }
 `;
 
-export default HeaderStyled
+export default HeaderStyled;

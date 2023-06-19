@@ -72,6 +72,11 @@ const TestimonialsStyled = styled.section`
                 }
             }
         }
+
+        .swiper-button-disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
     }
 `;
 
