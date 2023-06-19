@@ -38,9 +38,9 @@ const TestimonialsStyled = styled.section`
             border-radius: 23px !important;
             background: ${({ theme }) => theme.colors.creamyWhite} !important;
             opacity: 1 !important;
-        }
-        .swiper-pagination-bullet-active {
-            opacity: 0.6 !important;
+            &-active {
+                opacity: 0.6 !important;
+            }
         }
         .custom-pagination {
             display: flex;
@@ -48,33 +48,29 @@ const TestimonialsStyled = styled.section`
             padding: 20px 0;
         }
 
-        .custom-navigation {
+        .custom-nav {
             display: flex;
             height: 0;
             justify-content: space-between;
             position: relative;
-        }
-
-        .custom-prev-btn {
-            background-image: url("./images/prev-btn.svg");
-            background-repeat: no-repeat;
-            height: 24px;
-            z-index: 10;
-            flex-basis: 24px;
-            position: relative;
-            top: -210px;
-            left: -50px;
-        }
-        
-        .custom-next-btn {
-            flex-basis: 24px;
-            background-image: url("./images/next-btn.svg");
-            background-repeat: no-repeat;
-            cursor: pointer;
-            height: 24px;
-            position: relative;
-            top: -210px;
-            right: -50px;
+            &-btn {
+                background-repeat: no-repeat;
+                height: 24px;
+                z-index: 10;
+                flex-basis: 24px;
+                position: relative;
+                cursor: pointer;
+                &-prev {
+                    background-image: url("./images/prev-btn.svg");
+                    top: -210px;
+                    left: -50px;
+                }
+                &-next {
+                    background-image: url("./images/next-btn.svg");
+                    top: -210px;
+                    right: -50px;
+                }
+            }
         }
     }
 `;
@@ -104,8 +100,8 @@ const Testimonials = () => {
                     // onSlideChange={() => console.log("slide change")}
                     // onSwiper={(swiper) => console.log(swiper)}
                     navigation={{
-                        nextEl: ".custom-next-btn",
-                        prevEl: ".custom-prev-btn",
+                        nextEl: ".custom-nav-btn-next",
+                        prevEl: ".custom-nav-btn-prev",
                     }}
                     pagination={{ clickable: true, el: ".custom-pagination" }}
                     breakpoints={{
@@ -126,9 +122,9 @@ const Testimonials = () => {
                     {slidesList}
                 </Swiper>
                 <div className="custom-pagination" />
-                <div className="custom-navigation">
-                    <div className="custom-prev-btn"></div>
-                    <div className="custom-next-btn"></div>
+                <div className="custom-nav">
+                    <div className="custom-nav-btn custom-nav-btn-prev"></div>
+                    <div className="custom-nav-btn custom-nav-btn-next"></div>
                 </div>
             </div>
         </TestimonialsStyled>
