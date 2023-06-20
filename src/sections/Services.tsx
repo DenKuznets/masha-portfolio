@@ -81,7 +81,7 @@ const cardsList = cards.map((card, index) => (
 
 const Services = () => {
     return (
-        <ServicesStyled>
+        <ServicesStyled id="services">
             <h2>Services</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam

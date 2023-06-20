@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import aboutImg from "../../../public/images/about-img.png";
+import aboutImg from "/images/about-img.png";
 import Slider from "../ui/Slider";
 
 const AboutStyled = styled.section`

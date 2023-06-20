@@ -7,7 +7,7 @@ const TestimonialsStyled = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 14px;
+    padding: 57px 0;
     background: ${({ theme }) => theme.colors.smoothRed};
     color: ${({ theme }) => theme.colors.creamyWhite};
 
@@ -91,7 +91,7 @@ for (let i = 0; i < 10; i++) {
 
 const Testimonials = () => {
     return (
-        <TestimonialsStyled>
+        <TestimonialsStyled id="testimonials">
             <h2>Testimonials</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam

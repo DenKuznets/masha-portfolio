@@ -6,7 +6,7 @@ import { RedButton } from "../ui/Buttons";
 import NavList from "./NavList";
 import Logo from "./Logo";
 
-const Header = () => {
+const Header = ({className} : {className : string}) => {
     const [menuActive, setMenuActive] = useState(false);
     useEffect(() => {
         if (menuActive) document.body.style.overflow = "hidden";
@@ -14,7 +14,7 @@ const Header = () => {
     }, [menuActive]);
 
     return (
-        <HeaderStyled>
+        <HeaderStyled className={className}>
             <Logo/>
             <NavList className={menuActive ? "nav__menu--open" : ""} />
             <RedButton>Download CV</RedButton>

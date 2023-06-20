@@ -8,12 +8,17 @@ const mobileMultiplyer = 0.5;
 const GlobalStyle = createGlobalStyle`
 ${cssResets};
 
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
 
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
-section, header {
+section {
     padding: 0 15px;
 }
 

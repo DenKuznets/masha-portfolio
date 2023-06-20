@@ -2,8 +2,6 @@ import styled from "styled-components";
 import NavList from "./NavList";
 import Logo from "./Logo";
 
-const navHide = "1395px";
-
 const FooterStyled = styled.footer`
     padding-top: 66px;
     padding-bottom: 50px;

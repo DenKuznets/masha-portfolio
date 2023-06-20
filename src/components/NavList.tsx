@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
-const navText = ["Home", "About us", "Services", "Projects", "Testimonials"];
+const navText = ["Home", "About me", "Services", "Projects", "Testimonials"];
 
-const list = navText.map((item, index) => (
-    <li key={index}>
-        <a href="">{item}</a>
-    </li>
-));
+const list = navText.map((item, index) => {
+    const href =
+        item === "Home" ? "#" : `#${item.toLocaleLowerCase().split(" ")[0]}`;
+    return (
+        <li key={index}>
+            <a href={href}>{item}</a>
+        </li>
+    );
+});
 
 const NavListStyled = styled.nav`
     display: flex;

@@ -1,15 +1,14 @@
 import styled from "styled-components";
 
 const navHide = "1395px";
-const HeaderStyled = styled.header`
-    position: sticky;
-    top: 20px;
-    margin: 0 auto;
+const HeaderStyled = styled.header`    
     color: ${({ theme }) => theme.colors.creamyWhite};
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 1404px;
+    padding: 0 15px;
+    max-width: 1434px;
+    z-index: 2;
 
     .logo {
         color: ${({ theme }) => theme.colors.white};
@@ -53,15 +52,18 @@ const HeaderStyled = styled.header`
                     padding: 0;
                     background-color: rgba(0, 0, 0, 0.9);
                 }
-                a {
-                    opacity: 1;
-                }
             }
             li {
                 color: ${({ theme }) => theme.colors.creamyWhite};
                 @media (max-width: ${navHide}) {
                     margin-right: 0;
                     font-size: 1rem;
+                }
+                a {
+                    opacity: 1;
+                    &:hover {
+                        color: ${({ theme }) => theme.colors.smoothRed};
+                    }
                 }
             }
         }

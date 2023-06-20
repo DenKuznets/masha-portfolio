@@ -40,7 +40,9 @@ const ProjectsStyled = styled.section`
                 transition: all 0.1s ease;
                 display: flex;
                 align-items: center;
-                &.active {
+                transition: all 0.3s ease;
+                &.active,
+                &:hover {
                     background-color: ${({ theme }) => theme.colors.smoothRed};
                     color: ${({ theme }) => theme.colors.creamyWhite};
                     border-radius: 4px;
@@ -67,7 +69,7 @@ const Projects = () => {
     ));
 
     return (
-        <ProjectsStyled>
+        <ProjectsStyled id="projects">
             <h2>Projects</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam

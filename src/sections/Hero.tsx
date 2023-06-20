@@ -3,16 +3,29 @@ import { RedButton, WhiteButton } from "../ui/Buttons";
 import screen from "../ts/breakpoints";
 
 const HeroStyled = styled.section`
-    padding-top: 275px;
+    background-image: url(/images/hero-mask.svg), url(/images/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 100%; */
+    min-height: 1000px;
+    background-position: center;
+    display: flex;
+    align-items: center;
     @media only screen and (max-width: 500px) {
-        padding-top: 100px;
         text-align: center;
     }
     .hero {
-        max-width: 840px;
-        margin-left: 252px;
+        width: 100%;
+        max-width: 1404px;
+        margin: 0 auto;
+        /* outline: 1px solid green; */
+        /* margin-left: 252px; */
         @media only screen and (max-width: 1440px) {
             margin: auto;
+        }
+        &__text{
+            max-width: 840px;
+            /* outline: 1px solid red; */
         }
         h1 {
             color: ${({ theme }) => theme.colors.smoothRed};
@@ -66,19 +79,21 @@ const Hero = () => {
     return (
         <HeroStyled id="hero">
             <div className="hero">
-                <h1>Hi, I am Ramisha</h1>
-                <div className="hero__em" >Freelane UI/UX Designer</div >
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Etiam eu turpis molestie, dictum est a, mattis tellus. Sed
-                    dignissim, metus nec fringilla accumsan, risus sem
-                    sollicitudin lacus, ut interdum tellus elit sed risus.
-                </p>
-                <div className="hero__buttons">
-                    <RedButton as="a" href="https://t.me/davinchushka">
-                        Hire me
-                    </RedButton>
-                    <WhiteButton>Contact me</WhiteButton>
+                <div className="hero__text">
+                    <h1>Hi, I am Ramisha</h1>
+                    <div className="hero__em">Freelane UI/UX Designer</div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Etiam eu turpis molestie, dictum est a, mattis tellus.
+                        Sed dignissim, metus nec fringilla accumsan, risus sem
+                        sollicitudin lacus, ut interdum tellus elit sed risus.
+                    </p>
+                    <div className="hero__buttons">
+                        <RedButton as="a" href="https://t.me/davinchushka">
+                            Hire me
+                        </RedButton>
+                        <WhiteButton>Contact me</WhiteButton>
+                    </div>
                 </div>
             </div>
         </HeroStyled>
