@@ -20,7 +20,6 @@ const TestimonialsStyled = styled.section`
         text-align: center;
         line-height: 1.4;
     }
-
     
     .carousel {
         width: 100%;
