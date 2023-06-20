@@ -65,10 +65,10 @@ const MainPage = () => {
                 className={headerFixed ? "header header--fixed" : "header"}
             />
             <main>
-                <Hero />
-                <About />
-                <Services />
-                <Projects />
+                {/* <Hero /> */}
+                {/* <About /> */}
+                {/* <Services /> */}
+                {/* <Projects /> */}
                 <Testimonials />
             </main>
             <Footer />
