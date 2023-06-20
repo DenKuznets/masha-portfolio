@@ -1,3 +1,2 @@
-link anchors correct
-sections margins
+fix swiper import error
 ProjectPage design and styling
