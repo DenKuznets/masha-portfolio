@@ -8,11 +8,6 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-!node_modules/
-node_modules/*
-!node_modules/swiper
-node_modules/swiper/*
-!node_modules/swiper/package.json
 dist
 dist-ssr
 *.local
