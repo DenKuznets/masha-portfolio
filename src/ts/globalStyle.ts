@@ -55,6 +55,10 @@ p{
     } */
 }
 
+a{
+     transition: all 0.3s ease;
+}
+
 .bg1 {
     /* padding-top: 71px; */
     background-image: url(/images/hero-mask.svg),

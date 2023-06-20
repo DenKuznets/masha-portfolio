@@ -17,6 +17,7 @@ const HeaderStyled = styled.header`
 
         @media only screen and (max-width: 500px) {
             margin-right: auto;
+            font-size: 1.2rem;
         }
     }
 

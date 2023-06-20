@@ -5,39 +5,50 @@ import Logo from "./Logo";
 const navHide = "1395px";
 
 const FooterStyled = styled.footer`
+    padding-top: 66px;
+    padding-bottom: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin: 0 auto;
     color: black;
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 1404px;
-    background-color: ${({ theme }) => theme.colors.palePink};    
+    background-color: ${({ theme }) => theme.colors.palePink};
+    .socials {
+        display: flex;
+        column-gap: 80px;
+        row-gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        a {
+            width: 48px;
+            height: 48px;
+            display: block;
+            &:hover {
+                transform: scale(1.1);
+            }
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .logo {
+        margin-bottom: 52px;
+    }
 
     nav {
-        
-
+        margin-bottom: 65px;
         ul {
-            
-            /* @media (max-width: ${navHide}) {
-                position: fixed;
-                width: 100%;
-                flex-direction: column;
-                top: 0;
-                left: 0;
-                min-height: 0;
-                max-height: 0;
-                overflow: hidden;
-                
-                a {
-                    opacity: 1;
+            flex-wrap: wrap;
+            a {
+                &:hover {
+                    color: ${({ theme }) => theme.colors.smoothRed};
                 }
-            } */
-            li {
-                
-                /* @media (max-width: ${navHide}) {
-                    margin-right: 0;
-                    font-size: 1rem;
-                } */
             }
         }
     }
@@ -49,16 +60,16 @@ const socialIcons = [
         img: "Facebook.svg",
     },
     {
+        link: "Twitter.com",
+        img: "Twitter.svg",
+    },
+    {
         link: "Instagram.com",
         img: "Instagram.svg",
     },
     {
         link: "LinkedIn.com",
         img: "LinkedIn.svg",
-    },
-    {
-        link: "Twitter.com",
-        img: "Twitter.svg",
     },
 ];
 
@@ -72,7 +83,7 @@ const socialIconsList = socialIcons.map((icon, index) => (
 
 const Footer = () => {
     return (
-        <FooterStyled>         
+        <FooterStyled>
             <Logo />
             <NavList />
             <ul className="socials">{socialIconsList}</ul>

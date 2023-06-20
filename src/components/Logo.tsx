@@ -3,10 +3,8 @@ import styled from "styled-components";
 const LogoStyled = styled.div`
     font-size: 2.5rem;
     line-height: 1.2;
-
-    @media only screen and (max-width: 500px) {
-        font-size: 1.2rem;
-    }
+    cursor: pointer;
+    
 
     span {
         color: ${({ theme }) => theme.colors.smoothRed};
