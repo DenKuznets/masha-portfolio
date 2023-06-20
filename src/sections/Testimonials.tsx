@@ -2,6 +2,7 @@
 import { Navigation, Pagination } from "swiper";
 // @ts-ignore
 import { Swiper, SwiperSlide,  } from "swiper/react";
+// @ts-ignore
 import "swiper/css/bundle";
 import styled from "styled-components";
 
