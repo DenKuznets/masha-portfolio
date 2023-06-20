@@ -21,6 +21,7 @@ const TestimonialsStyled = styled.section`
         line-height: 1.4;
     }
 
+    
     .carousel {
         width: 100%;
         max-width: 1404px;
