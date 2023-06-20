@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide,  } from "swiper/react";
 import "swiper/css/bundle";
