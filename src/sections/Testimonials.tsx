@@ -1,5 +1,5 @@
-import { Swiper, SwiperSlide,  } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import styled from "styled-components";
 
@@ -20,7 +20,7 @@ const TestimonialsStyled = styled.section`
         text-align: center;
         line-height: 1.4;
     }
-    
+
     .carousel {
         width: 100%;
         max-width: 1404px;
