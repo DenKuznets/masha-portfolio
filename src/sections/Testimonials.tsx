@@ -1,10 +1,7 @@
 import { Swiper, SwiperSlide,  } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
-// import { register } from 'swiper/element/bundle';
 import "swiper/css/bundle";
 import styled from "styled-components";
-
-// register();
 
 const TestimonialsStyled = styled.section`
     display: flex;
@@ -105,6 +102,8 @@ const Testimonials = () => {
                     modules={[Navigation, Pagination]}
                     spaceBetween={31}
                     slidesPerView={4}
+                    // onSlideChange={() => console.log("slide change")}
+                    // onSwiper={(swiper) => console.log(swiper)}
                     navigation={{
                         nextEl: ".custom-nav-btn-next",
                         prevEl: ".custom-nav-btn-prev",
@@ -132,7 +131,6 @@ const Testimonials = () => {
                     <div className="custom-nav-btn custom-nav-btn-prev"></div>
                     <div className="custom-nav-btn custom-nav-btn-next"></div>
                 </div>
-
             </div>
         </TestimonialsStyled>
     );
