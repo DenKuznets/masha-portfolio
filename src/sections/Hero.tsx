@@ -6,13 +6,15 @@ const HeroStyled = styled.section`
     background-image: url(/images/hero-mask.svg), url(/images/hero-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    /* background-origin: ; */
     /* width: 100%; */
     min-height: 1000px;
-    background-position: center;
     display: flex;
     align-items: center;
     @media only screen and (max-width: 500px) {
         text-align: center;
+        background-position: 75% center;
     }
     .hero {
         width: 100%;
