@@ -18,12 +18,16 @@ const TestimonialsStyled = styled.section`
         line-height: 1.4;
     }
 
-    .carousel {
+    .reviews {
         width: 100%;
         max-width: 1404px;
         padding: 0 50px;
-        .card {
-            width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        .review {
+            flex-basis: 290px;
             height: 300px;
             background-color: aqua;
             border-radius: 10px;
@@ -32,12 +36,10 @@ const TestimonialsStyled = styled.section`
 `;
 
 const slidesList: JSX.Element[] = [];
-for (let i = 0; i < 10; i++) {
-    slidesList.push(
-        <div key={i}>
-            <div className="card"></div>
-        </div>
-    );
+for (let i = 0; i < 4; i++) {
+    slidesList.push(<div className="review" key={i}>
+        <img src="" alt="" />
+    </div>);
 }
 
 const Testimonials = () => {
@@ -48,7 +50,7 @@ const Testimonials = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
                 eu turpis molestie, dictum est a, mattis tellus.
             </p>
-            <div className="carousel">{slidesList}</div>
+            <div className="reviews">{slidesList}</div>
         </TestimonialsStyled>
     );
 };
