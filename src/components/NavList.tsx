@@ -1,17 +1,5 @@
 import styled from "styled-components";
 
-const navText = ["Home", "About me", "Services", "Projects", "Testimonials"];
-
-const list = navText.map((item, index) => {
-    const href =
-        item === "Home" ? "#" : `#${item.toLocaleLowerCase().split(" ")[0]}`;
-    return (
-        <li key={index}>
-            <a href={href}>{item}</a>
-        </li>
-    );
-});
-
 const NavListStyled = styled.nav`
     display: flex;
     align-items: center;
@@ -30,7 +18,33 @@ const NavListStyled = styled.nav`
     }
 `;
 
-const NavList = ({ className }: { className?: string }) => {
+const NavList = ({
+    onClick,
+    className,
+}: {
+    onClick: () => void;
+    className?: string;
+}) => {
+    const navText = [
+        "Home",
+        "About me",
+        "Services",
+        "Projects",
+        "Testimonials",
+    ];
+
+    const list = navText.map((item, index) => {
+        const href =
+            item === "Home"
+                ? "#"
+                : `#${item.toLocaleLowerCase().split(" ")[0]}`;
+        return (
+            <li onClick={onClick} key={index}>
+                <a href={href}>{item}</a>
+            </li>
+        );
+    });
+
     return (
         <NavListStyled>
             <ul className={className}>{list}</ul>

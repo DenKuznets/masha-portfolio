@@ -16,7 +16,7 @@ const Header = ({className} : {className : string}) => {
     return (
         <HeaderStyled className={className}>
             <Logo/>
-            <NavList className={menuActive ? "nav__menu--open" : ""} />
+            <NavList onClick={() => setMenuActive(false)} className={menuActive ? "nav__menu--open" : ""} />
             <RedButton>Download CV</RedButton>
             <IconContext.Provider
                 value={{
