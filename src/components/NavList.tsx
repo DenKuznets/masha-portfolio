@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const NavListStyled = styled.nav`
@@ -40,7 +41,7 @@ const NavList = ({
                 : `#${item.toLocaleLowerCase().split(" ")[0]}`;
         return (
             <li onClick={onClick} key={index}>
-                <a href={href}>{item}</a>
+                <Link to={href}>{item}</Link>
             </li>
         );
     });
