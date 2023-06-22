@@ -12,7 +12,7 @@ const ProjectsList = [
         name: "project-name",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. ",
-        images: ["proj2-1.png", "proj2-2.png"],
+        images: ["proj1-1.png", "proj1-2.png"],
         id: 2,
     },
     {
@@ -20,7 +20,7 @@ const ProjectsList = [
         name: "project-name",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. ",
-        images: ["proj3-1.png", "proj3-2.png"],
+        images: ["proj1-1.png", "proj1-2.png"],
         id: 3,
     },
     {
@@ -28,7 +28,7 @@ const ProjectsList = [
         name: "project-name",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. ",
-        images: ["proj1-1.png", "proj1-2.png"],
+        images: ["proj2-1.png", "proj2-2.png"],
         id: 4,
     },
     {
@@ -44,7 +44,7 @@ const ProjectsList = [
         name: "project-name",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. ",
-        images: ["proj3-1.png", "proj3-2.png"],
+        images: ["proj2-1.png", "proj2-2.png"],
         id: 6,
     },
     {
@@ -52,7 +52,7 @@ const ProjectsList = [
         name: "project-name",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. ",
-        images: ["proj1-1.png", "proj1-2.png"],
+        images: ["proj3-1.png", "proj3-2.png"],
         id: 7,
     },
     {
@@ -60,7 +60,7 @@ const ProjectsList = [
         name: "project-name",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. ",
-        images: ["proj2-1.png", "proj2-2.png"],
+        images: ["proj3-1.png", "proj3-2.png"],
         id: 8,
     },
     {
@@ -76,7 +76,7 @@ const ProjectsList = [
         name: "project-name",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. ",
-        images: ["proj1-1.png", "proj1-2.png"],
+        images: ["web-design-1.png", "web-design-2.jpg"],
         id: 10,
     },
     {
@@ -84,7 +84,7 @@ const ProjectsList = [
         name: "project-name",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. ",
-        images: ["proj2-1.png", "proj2-2.png"],
+        images: ["web-design-1.png", "web-design-2.jpg"],
         id: 11,
     },
     {
@@ -92,7 +92,7 @@ const ProjectsList = [
         name: "project-name",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. ",
-        images: ["proj3-1.png", "proj3-2.png"],
+        images: ["web-design-1.png", "web-design-2.jpg"],
         id: 12,
     },
 ];
