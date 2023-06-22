@@ -1,4 +1,5 @@
 import styled from "styled-components";
+// import reviewImg from './images/review.png';
 
 const TestimonialsStyled = styled.section`
     display: flex;
@@ -31,6 +32,12 @@ const TestimonialsStyled = styled.section`
             height: 300px;
             background-color: aqua;
             border-radius: 10px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 `;
@@ -38,7 +45,7 @@ const TestimonialsStyled = styled.section`
 const slidesList: JSX.Element[] = [];
 for (let i = 0; i < 4; i++) {
     slidesList.push(<div className="review" key={i}>
-        <img src="" alt="" />
+        <img src='./images/review.png' alt="" />
     </div>);
 }
 
