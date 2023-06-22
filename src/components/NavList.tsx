@@ -23,7 +23,7 @@ const NavList = ({
     onClick,
     className,
 }: {
-    onClick: () => void;
+    onClick?: () => void;
     className?: string;
 }) => {
     const navText = [
