@@ -39,6 +39,9 @@ h2{
     font-weight: 600;
     font-size: 3.45rem;
     line-height: 1.25;
+    @media only screen and (max-width: 375px) {
+        font-size: 2.75rem;
+    }
 }
 
 h3{

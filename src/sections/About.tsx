@@ -16,6 +16,7 @@ const AboutStyled = styled.section`
             flex-basis: 798px;
             @media only screen and (max-width: 1350px) {
                 max-width: 700px;
+                flex-basis: unset;
             }
         }
         &__text {
